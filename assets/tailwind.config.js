@@ -11,11 +11,24 @@ module.exports = {
     "../lib/*_web.ex",
     "../lib/*_web/**/*.*ex"
   ],
+
   theme: {
     extend: {
       colors: {
-        brand: "#FD4F00",
-      }
+        themerose: {
+          50: "#FCEEEF",
+          100: "#F9DCDF",
+          200: "#F2B5BB",
+          300: "#EC929B",
+          400: "#E66F7B",
+          500: "#E04B5A",
+          600: "#CC2334",
+          700: "#981A27",
+          800: "#64111A",
+          900: "#34090D",
+          950: "#1A0407"
+        },
+      },
     },
   },
   plugins: [
