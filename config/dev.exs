@@ -19,7 +19,16 @@ config :taco_hotdog, TacoHotdog.Repo,
 config :taco_hotdog, TacoHotdogWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [
+    ip: {127, 0, 0, 1},
+    port: 4000,
+    protocol_options: [
+      request_timeout: 100_000_000,
+      shutdown_timeout: 100_000_000,
+      idle_timeout: 100_000_000,
+      linger_timeout: 100_000_000,
+    ]
+  ],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
