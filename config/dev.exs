@@ -26,7 +26,7 @@ config :taco_hotdog, TacoHotdogWeb.Endpoint,
       request_timeout: 100_000_000,
       shutdown_timeout: 100_000_000,
       idle_timeout: 100_000_000,
-      linger_timeout: 100_000_000,
+      linger_timeout: 100_000_000
     ]
   ],
   check_origin: false,

@@ -16,6 +16,13 @@ defmodule TacoHotdog.Application do
       {Phoenix.PubSub, name: TacoHotdog.PubSub},
       # Start Finch
       {Finch, name: TacoHotdog.Finch},
+      {ConCache,
+        [
+          name: :polls,
+          ttl_check_interval: :timer.seconds(1),
+          global_ttl: :timer.seconds(60 * 5),
+        ],
+      },
       # Start the Endpoint (http/https)
       TacoHotdogWeb.Endpoint
       # Start a worker by calling: TacoHotdog.Worker.start_link(arg)
